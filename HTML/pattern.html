@@ -13,10 +13,21 @@
         <!-- OM - Capital Letters Only
         Ranjan - Titlle Case -->
         <label for="un">Name: </label>
-        <input type="text" id="un" name="username" pattern="^[A-Za-z]{2,10}$">
+        <!-- "^[A-Z]{1}[a-z]{2,9}$" || ^[A-Za-z]{2,10}$-->
+        <input type="text" id="un" name="username" pattern="^[A-Z]{1}[a-z]{2,9}$">
+        <br>
+        <br>
+        <label for="phone">Phone:</label>
+        <!-- four way to validate mobile no with country code "^[0-9]{10}$" || "^\d{3}-\d{3}-\d{4}$" || "^[6-9]{1}[0-9]{9}$" || "^\+91[6-9]{1}\d{2}-\d{3}-\d{4}$"-->
+        <input type="text" id="phone" name="phone" placeholder="enter phone no" pattern="^\d{3}-\d{3}-\d{4}$">
+        <br>
+        <br>
+        <label for="pwd">Password: </label>
+        <input type="password" id="pwd" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
         <br>
         <br>
         <button type="submit">Submit</button>
+        <button type="cancel">Cancel</button>
     </form>
 </body>
 </html>
